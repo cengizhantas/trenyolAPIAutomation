@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BookStore Api Testing">
+	<parameter name="BaseURI" value="http://165.227.145.174:8081/" />
+
+	<test name="BookStore Api Testing">
+		<classes>
+			<class name="test.TestSuite">
+				<methods>
+					<include name="emptyStore" />
+					<include name="requiredFieldTitle" />
+					<include name="requiredFieldAuthor" />
+					<include name="emptyAuthorFields" />
+					<include name="emptyTitleFields" />
+					<include name="readOnlyId" />
+					<include name="putbooksDuplicate" />
+					<include name="getBookNotFound" />
+					<include name="getBookFound" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
